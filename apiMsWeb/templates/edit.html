@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">
+        {% block title %} Edit PostID: {{ post.postId }} {% endblock %}
+    </h1>
+    <form method="post">
+        <p>
+            <label for="postId">PostID </label>
+            <input type="number" name="postId"
+                   value={{ post.postId }}
+                   readonly>
+            </input>
+        </p>
+
+        <p>
+            <label for="userId">UserID </label>
+            <input type="number" name="userId"
+                   value={{ post.userId }}>
+            </input>
+        </p>
+
+        <p>
+            <label for="title">Title </label>
+            <input type="text" name="title"
+                   value={{ post.title }}>
+            </input>
+        </p>
+
+        <p>
+        <label for="body">Body</label>
+        <br>
+        <textarea name="body"
+                  rows="15"
+                  cols="60"
+                  >{{ post.body }}</textarea>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}
