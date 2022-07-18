@@ -8,3 +8,4 @@ Program s webom a database vyhadzuje ties errors pri zadani zlej type alebo blan
 > $env:FLASK_APP = "app"
 > $env:FLASK_ENV = "development"
 > flask run
+# Tieto commands nam zhotovili localhost.
